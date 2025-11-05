@@ -1,4 +1,18 @@
 {
+  "name": "kononi-plus-plus",
+  "version": "1.0.0",
+  "description": "Modern JAMstack website built with Vite and vanilla JS",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "dependencies": {}
+}
   "name": "your-project-name",
   "version": "1.0.0",
   "description": "Your project description",
