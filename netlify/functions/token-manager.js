@@ -15,6 +15,8 @@
 // WARNING: Data will be lost on function restart/cold start
 const userTokens = new Map();
 
+// *** RUNTIME WARNING: In-memory storage will lose all user token data on function cold starts! ***
+console.warn('[Token Manager] WARNING: Using in-memory storage for user tokens. All data will be lost on function cold start or restart. THIS IS NOT SUITABLE FOR PRODUCTION. Please implement persistent storage (e.g., FaunaDB, Supabase, Firebase, PostgreSQL).');
 // Default token allocation for new users
 const DEFAULT_TOKENS = 100;
 
