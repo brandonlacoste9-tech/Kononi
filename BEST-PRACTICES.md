@@ -706,6 +706,145 @@ function getCorsHeaders(origin) {
 }
 ```
 
+### Glassmorphism Effects - Crystal Clear Cells
+
+**Modern glass-like UI elements:**
+
+```css
+/* ✅ Good - glassmorphism for modern UI */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(245, 158, 11, 0.5);
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+}
+```
+
+### Component Styling - Building Honeycomb Cells
+
+**Real-world component patterns for the Creator Studio:**
+
+```css
+/* ✅ Good - BEM-like naming for clarity */
+/* 🏗️ Creator Studio - the main hive structure */
+.creator-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0A0A0B 0%, #1a1a2e 50%, #16213e 100%);
+}
+
+.creator-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--space-4);
+}
+
+.creator-main {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: calc(100vh - 80px);
+}
+
+.creator-sidebar {
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 80px);
+    background: rgba(255, 255, 255, 0.02);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--space-6) var(--space-4);
+}
+
+.creator-content {
+    padding: var(--space-8);
+}
+
+/* 🐝 Navigation items - like cells in the hive */
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-md);
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--primary-gold);
+}
+
+.nav-item.active {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--primary-gold);
+    border-left: 3px solid var(--primary-gold);
+}
+```
+
+### Layout Patterns - Hexagonal Grid System
+
+**Grid and flexbox patterns for organized layouts:**
+
+```css
+/* ✅ Good - Grid layout for main structure */
+.creator-main {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 0;
+}
+
+/* ✅ Good - Flexbox for component internals */
+.creator-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.token-display {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+/* ✅ Good - Responsive grid for cards */
+.hive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-6);
+    padding: var(--space-6);
+}
+
+/* ✅ Good - Flex wrap for tags/badges */
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+/* ❌ Avoid - overly complex grid patterns */
+.complex-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 100px);
+    /* Too rigid, hard to maintain */
+}
+```
+
 ---
 
 ## 6. Testing Strategy - Quality Control
