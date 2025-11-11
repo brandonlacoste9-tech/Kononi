@@ -12,12 +12,22 @@ public/
 dist/
 build/
 *.log
+# Build output
+public/
+dist/
+.netlify/
+
+# Environment variables
+.env
+.env.local
+.env.production
 
 # OS files
 .DS_Store
 Thumbs.db
 
 # IDE
+# IDE files
 .vscode/
 .idea/
 *.swp
@@ -31,3 +41,21 @@ temp/
 
 # Archive files (unless needed)
 *.zip
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# Legacy project files
+*adgenxai*
+*AdGenXAI*
